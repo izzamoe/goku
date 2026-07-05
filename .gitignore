@@ -1,0 +1,6 @@
+# Never commit secrets
+.env
+*.key
+# Local scratch
+*.log
+tmp/

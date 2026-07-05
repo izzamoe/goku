@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash CLAUDE_HOOKS_DIR/go-hooks.sh",
+            "timeout": 120,
+            "statusMessage": "go checks"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "go-lsp@zircote-lsp": true
+  },
+  "extraKnownMarketplaces": {
+    "zircote-lsp": {
+      "source": {
+        "source": "github",
+        "repo": "zircote/lsp-marketplace"
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+# Golang skills from samber/cc-skills-golang installed globally by install.sh
+# One skill per line. Lines starting with '#' and blank lines are ignored.
+# Source: https://github.com/samber/cc-skills-golang
+#
+# --- Core (dipakai di semua project Go) ---
+golang-code-style
+golang-error-handling
+golang-naming
+golang-project-layout
+golang-structs-interfaces
+golang-design-patterns
+golang-safety
+golang-concurrency
+golang-context
+golang-testing
+golang-lint
+golang-performance
+golang-security
+golang-documentation
+golang-troubleshooting
+golang-how-to
+golang-modernize
+golang-stay-updated
+golang-dependency-management
+golang-continuous-integration
+golang-benchmark
+golang-observability
+golang-pkg-go-dev
+golang-popular-libraries
+golang-data-structures
+#
+# --- Web / API ---
+golang-grpc
+golang-graphql
+golang-swagger
+golang-database
+#
+# --- Ekosistem samber ---
+golang-samber-lo
+golang-samber-do
+golang-samber-mo
+golang-samber-oops
+golang-samber-slog
+golang-samber-ro
+golang-samber-hot
