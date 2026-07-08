@@ -9,7 +9,7 @@ It bundles four layers that solve four different failure modes:
 | Layer | What it gives Claude | Fixes |
 |-------|----------------------|-------|
 | **Skills** (`golang-*` from [samber/cc-skills-golang](https://github.com/samber/cc-skills-golang)) | Knowledge of idiomatic Go — style, errors, concurrency, testing, security, patterns | "AI slop" / non-idiomatic code |
-| **go-lsp plugin** ([zircote/go-lsp](https://github.com/zircote/go-lsp)) + gopls | Real-time types, definitions, references | Wrong symbols / invented APIs |
+| **gopls LSP plugin** ([anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/gopls-lsp)) | Real-time types, definitions, references | Wrong symbols / invented APIs |
 | **PostToolUse hook** (`hooks/go-hooks.sh`) | Auto format → compile-gate → vet/lint/gosec/modernize on every edit | Syntax errors slipping through |
 | **Context7 MCP** | Live, versioned library documentation | "AI is out of date, can't use new libs" |
 
@@ -37,7 +37,7 @@ CONTEXT7_API_KEY=ctx7sk-xxxx ./install.sh
 2. `go install`s the dev tools: `gopls`, `golangci-lint`, `govulncheck`, `gosec`,
    `goimports`, `staticcheck`, `modernize`.
 3. Installs the `golang-*` skills listed in [`skills/golang-skills.txt`](skills/golang-skills.txt) globally.
-4. Enables the `go-lsp@zircote-lsp` plugin (merged into `~/.claude/settings.json`).
+4. Enables the `gopls-lsp` plugin via `/plugin install gopls-lsp@claude-plugins-official` from [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) (merged into `~/.claude/settings.json`).
 5. Copies [`hooks/go-hooks.sh`](hooks/go-hooks.sh) to `~/.claude/hooks/` and wires the
    `PostToolUse` hook.
 6. Registers the Context7 MCP server (`claude mcp add`, user scope).

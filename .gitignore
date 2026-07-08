@@ -1,6 +1,51 @@
-# Never commit secrets
+# —— Secrets ——
 .env
 *.key
-# Local scratch
+*.pem
+*.cert
+*.crt
+
+# —— Go ——
+/bin/
+/vendor/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.test.exe
+*.prof
+/cov*
+/coverage.*
+/trace.*
+*.cover.out
+*.coverprofile
+
+# —— OS ——
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# —— IDE ——
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+
+# —— Claude/OMC local state ——
+.omc/state/
+
+# —— Misc ——
 *.log
 tmp/
+dist/
+/build/
